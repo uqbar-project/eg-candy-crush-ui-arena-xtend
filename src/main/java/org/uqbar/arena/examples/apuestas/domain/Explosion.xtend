@@ -43,7 +43,7 @@ class Explosion extends AbstractExplosion {
 	}
 
 	override toString() {
-		"<" + celdas + ">" 
+		"<".concat(celdas.toString).concat(">") 
 	}
 
 }
