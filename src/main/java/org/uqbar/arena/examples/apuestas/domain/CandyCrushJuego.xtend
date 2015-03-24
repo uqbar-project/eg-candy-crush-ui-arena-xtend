@@ -1,15 +1,17 @@
 package org.uqbar.arena.examples.apuestas.domain
 
 import java.util.List
+import org.eclipse.xtend.lib.annotations.Accessors
 import org.uqbar.commons.utils.Observable
 
 import static extension org.uqbar.arena.examples.apuestas.domain.Extensions.*
 
 @Observable
+@Accessors
 class CandyCrushJuego implements TableroListener {
-	@Property Tablero tablero = new Tablero(10,10)
-	@Property Jugador jugador = new Jugador
-	@Property Celda celdaSeleccionada
+	Tablero tablero = new Tablero(10,10)
+	Jugador jugador = new Jugador
+	Celda celdaSeleccionada
 	
 	new() {
 		this.tablero.addTableroListener(this);
@@ -40,12 +42,13 @@ class CandyCrushJuego implements TableroListener {
 
 
 @Observable
+@Accessors
 class Celda {
-	@Property int x
-	@Property int y
-	@Property Caramelo contenido
-	@Property Tablero tablero
-	@Property boolean seleccionada
+	int x
+	int y
+	Caramelo contenido
+	Tablero tablero
+	boolean seleccionada
 	
 	new(Tablero tablero, Integer x, Integer y) {
 		this.x = x
@@ -178,8 +181,9 @@ class CeldaFueraDeTablero extends Celda {
 }
 
 @Observable
+@Accessors
 class Caramelo {
-	@Property Color color = Color.GRIS
+	Color color = Color.GRIS
 	
 	def getDescripcion() {
 		color.nombre
@@ -195,8 +199,9 @@ class Caramelo {
 }
 
 @Observable
+@Accessors
 class Color {
-	@Property String nombre
+	String nombre
 	public static Color GRIS = new Color("GRIS")
 	public static Color AZUL = new Color("AZUL")
 	public static Color VERDE = new Color("VERDE")
@@ -204,6 +209,7 @@ class Color {
 	public static Color AMARILLO = new Color("AMARILLO")
 	
 	public static List<Color> COLORES = #[AZUL, VERDE, ROJO, AMARILLO]
+	
 	new(String nombre) {
 		this.nombre = nombre
 	}
@@ -215,7 +221,8 @@ class Color {
 }
 
 @Observable
+@Accessors
 class Jugador {
-	@Property int puntos
+	int puntos
 }
 

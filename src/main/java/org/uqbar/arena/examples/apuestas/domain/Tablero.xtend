@@ -2,16 +2,18 @@ package org.uqbar.arena.examples.apuestas.domain
 
 import java.util.Iterator
 import java.util.List
+import org.eclipse.xtend.lib.annotations.Accessors
 import org.uqbar.commons.utils.Observable
 
 @Observable
+@Accessors
 class Tablero {
-	@Property int ancho
-	@Property int alto
-	@Property List<Celda> celdas = newArrayList
+	int ancho
+	int alto
+	List<Celda> celdas = newArrayList
 	Iterable<Fila> _filas // calculado, como un a "vista" de "celdas"
-	@Property GeneradorDeColor generadorColor = GeneradorColorRandom.INSTANCE
-	@Property List<TableroListener> listeners = newArrayList 
+	GeneradorDeColor generadorColor = GeneradorColorRandom.INSTANCE
+	List<TableroListener> listeners = newArrayList 
 	
 	new(int ancho, int alto) {
 		this.ancho = ancho
@@ -150,9 +152,10 @@ interface TableroListener {
 	
 }
 
+@Accessors
 class Fila implements Iterable<Celda> {
-	@Property int nroFila
-	@Property Tablero tablero
+	int nroFila
+	Tablero tablero
 	
 	new(Tablero tablero, int i) {
 		this.nroFila = i
@@ -193,6 +196,7 @@ class FilaIterator implements Iterator<Celda> {
 	override hasNext() {
 		contador < fila.tablero.ancho
 	}
+	
 	override next() {
 		val c = fila.celda(contador + 1)
 		contador = contador + 1

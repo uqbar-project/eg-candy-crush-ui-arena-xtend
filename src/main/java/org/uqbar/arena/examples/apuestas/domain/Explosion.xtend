@@ -1,8 +1,8 @@
 package org.uqbar.arena.examples.apuestas.domain
 
 abstract class AbstractExplosion {
-	def void realizar();
-	def void compactar();
+	def void realizar()
+	def void compactar()
 	def Boolean explotoAlgo() { false }
 	/** 
 	 * Una especia de "getOrElse" de scala
