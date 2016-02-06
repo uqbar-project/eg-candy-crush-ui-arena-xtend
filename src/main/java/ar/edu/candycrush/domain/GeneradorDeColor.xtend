@@ -1,6 +1,6 @@
-package org.uqbar.arena.examples.apuestas.domain
+package ar.edu.candycrush.domain
 
-import static extension org.uqbar.arena.examples.apuestas.domain.Extensions.*
+import static extension ar.edu.candycrush.domain.Extensions.*
 
 interface GeneradorDeColor {
 	def Color generarPara(Celda celda)

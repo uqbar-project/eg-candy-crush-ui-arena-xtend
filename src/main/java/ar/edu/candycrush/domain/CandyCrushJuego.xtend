@@ -1,20 +1,21 @@
-package org.uqbar.arena.examples.apuestas.domain
+package ar.edu.candycrush.domain
 
 import java.util.List
 import org.eclipse.xtend.lib.annotations.Accessors
 import org.uqbar.commons.utils.Observable
 
-import static extension org.uqbar.arena.examples.apuestas.domain.Extensions.*
+import static extension ar.edu.candycrush.domain.Extensions.*
 
 @Observable
 @Accessors
 class CandyCrushJuego implements TableroListener {
-	Tablero tablero = new Tablero(10,10)
+	
+	Tablero tablero = new Tablero(10, 10)
 	Jugador jugador = new Jugador
 	Celda celdaSeleccionada
 	
 	new() {
-		this.tablero.addTableroListener(this);
+		this.tablero.addTableroListener(this)
 	}
 	
 	def seleccionarCaramelo(Celda celda) {

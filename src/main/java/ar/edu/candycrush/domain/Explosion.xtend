@@ -1,4 +1,4 @@
-package org.uqbar.arena.examples.apuestas.domain
+package ar.edu.candycrush.domain
 
 abstract class AbstractExplosion {
 	def void realizar()

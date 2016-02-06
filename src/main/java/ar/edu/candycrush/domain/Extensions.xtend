@@ -1,9 +1,8 @@
-package org.uqbar.arena.examples.apuestas.domain
+package ar.edu.candycrush.domain
 
 import java.util.Collection
 import java.util.Random
-import org.eclipse.xtext.xbase.lib.IntegerRange
-import org.uqbar.arena.bindings.Transformer
+import org.uqbar.arena.bindings.ValueTransformer
 import org.uqbar.arena.bindings.transformers.AbstractReadOnlyTransformer
 
 class Extensions {
@@ -17,7 +16,7 @@ class Extensions {
 		col.get(index)
 	}
 	
-	def static <M> Transformer<M, String> toViewTransformer((M)=> String adapterFunction, Class<M> typeofModel) {
+	def static <M> ValueTransformer<M, String> toViewTransformer((M)=> String adapterFunction, Class<M> typeofModel) {
 		new FunctionBasedTransformer(adapterFunction, typeofModel)
 	}
 	

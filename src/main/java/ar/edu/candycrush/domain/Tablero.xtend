@@ -1,4 +1,4 @@
-package org.uqbar.arena.examples.apuestas.domain
+package ar.edu.candycrush.domain
 
 import java.util.Iterator
 import java.util.List

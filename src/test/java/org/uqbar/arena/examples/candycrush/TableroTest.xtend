@@ -3,11 +3,11 @@ package org.uqbar.arena.examples.candycrush
 import static extension junit.framework.Assert.*
 
 import org.junit.Test
-import org.uqbar.arena.examples.apuestas.domain.Tablero
+import ar.edu.candycrush.domain.Tablero
 
-import static org.uqbar.arena.examples.apuestas.domain.Color.*
-import org.uqbar.arena.examples.apuestas.domain.CandyCrushJuego
-import org.uqbar.arena.examples.apuestas.domain.CeldaFueraDeTablero
+import static ar.edu.candycrush.domain.Color.*
+import ar.edu.candycrush.domain.CandyCrushJuego
+import ar.edu.candycrush.domain.CeldaFueraDeTablero
 
 class TableroTest {
 	

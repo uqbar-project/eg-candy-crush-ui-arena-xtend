@@ -1,9 +1,10 @@
-package org.uqbar.arena.examples.apuestas.ui
+package ar.edu.candycrush.ui
 
 import org.uqbar.arena.Application
-import org.uqbar.arena.examples.apuestas.domain.CandyCrushJuego
+import ar.edu.candycrush.domain.CandyCrushJuego
 
 class CandyCrushApplication extends Application {
+	
 	override createMainWindow() {
 		new CandyCrushWindow(this, new CandyCrushJuego)
 	}
@@ -11,4 +12,5 @@ class CandyCrushApplication extends Application {
 	static def main(String[] args) {
 		new CandyCrushApplication().start
 	}
+	
 }
