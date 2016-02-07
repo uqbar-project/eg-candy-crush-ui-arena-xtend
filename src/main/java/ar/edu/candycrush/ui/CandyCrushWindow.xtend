@@ -36,7 +36,7 @@ class CandyCrushWindow extends SimpleWindow<CandyCrushJuego> {
 
 	def crearTablero(Panel mainPanel) {
 		val tableroPanel = new Panel(mainPanel) => []
-		tableroPanel.setLayout(new ColumnLayout(modelObject.tablero.ancho))
+		tableroPanel.layout = new ColumnLayout(modelObject.tablero.ancho)
 
 		modelObject.tablero.celdas.forEach [ celda |
 			new Panel(tableroPanel, celda) => [
