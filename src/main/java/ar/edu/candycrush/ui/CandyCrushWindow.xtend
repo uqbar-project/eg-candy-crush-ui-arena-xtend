@@ -59,7 +59,7 @@ class CandyCrushWindow extends SimpleWindow<CandyCrushJuego> {
 					bindCaptionToProperty("seleccionada")
 						.transformer = [m|if(m) "   X   " else "      "]
 						.toViewTransformer(typeof(Boolean))
-					onClick = new AsyncActionDecorator[|modelObject.seleccionarCaramelo(celda)]
+					onClick(new AsyncActionDecorator[|modelObject.seleccionarCaramelo(celda)])
 				]
 			]
 		]
