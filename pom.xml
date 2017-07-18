@@ -4,13 +4,13 @@
 
 	<artifactId>candycrush-ui-arena-xtend</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>candycrush-ui-arena-xtend</name>
+	<name>eg-candy-crush-ui-arena-xtend</name>
 	<description>Candy Crush !!</description>
 
 	<parent>
 		<groupId>org.uqbar-project</groupId>
 		<artifactId>arena-xtend-parent</artifactId>
-		<version>3.6.2</version>
+		<version>3.6.3</version>
 	</parent>
 
 	<build>

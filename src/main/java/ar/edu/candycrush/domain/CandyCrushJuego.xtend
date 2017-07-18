@@ -2,7 +2,7 @@ package ar.edu.candycrush.domain
 
 import java.util.List
 import org.eclipse.xtend.lib.annotations.Accessors
-import org.uqbar.commons.utils.Observable
+import org.uqbar.commons.model.annotations.Observable
 
 import static extension ar.edu.candycrush.domain.Extensions.*
 
